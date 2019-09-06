@@ -4,8 +4,9 @@
   let itemStore = require('./itemStore.js');
 
   let inspect = function() {
-    return Object.keys(itemStore).length;
+    return Object.keys(itemStore().items).length;
   }
+
   let equals = function(a, b) {
     console.log("Expected " + b + ", was " + a);
   }
@@ -16,7 +17,7 @@
     equals(inspect(), 1);
     let subject2 = item();
     equals(inspect(), 2);
-    itemStore = {};
+    itemStore().clear();
     equals(inspect(), 0);
   }
   test();

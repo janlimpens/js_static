@@ -6,7 +6,7 @@ let item = function() {
     rand: a,
     b: 'hello world'
   };
-  itemStore[a] = self;
+  itemStore().items[a] = self;
   return self;
 }
 
