@@ -1,4 +1,4 @@
-let itemList = require('./itemStore');
+let itemStore = require('./itemStore');
 
 let item = function() {
   let a = Math.random();
@@ -6,7 +6,7 @@ let item = function() {
     rand: a,
     b: 'hello world'
   };
-  itemList[a] = self;
+  itemStore[a] = self;
   return self;
 }
 
